@@ -1,14 +1,14 @@
 function svgToImage(svgElement) {
     return new Promise(resolve => {
         let svgData = new XMLSerializer().serializeToString(svgElement)
-        let svgBlob = new Blob([svgData], { type: 'image/svg+xmlcharset=utf-8' })
+        let svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' })
         let url = URL.createObjectURL(svgBlob)
         let img = new Image
         img.onload = ()=>{
-            URL.revokeObjectURL(url) // Clean up the URL object
+            URL.revokeObjectURL(url)
             resolve(img)
         }
-        img.onerror = function () {
+        img.onerror = ()=>{
             console.error('Failed to convert SVG to image.')
             URL.revokeObjectURL(url)
         }
