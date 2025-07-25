@@ -25,14 +25,14 @@ class Svg {
             defs
             path
             polygon`.split('\n').map(e=>e.trim())) {
-                this[element] = (options,innerHTML)=>this.createElement(element,options,innerHTML)
+                this[element] = (options,innerHTML,parent=this.element)=>this.createElement(element,options,innerHTML,parent)
         }
     }
-    createElement(name,options,innerHTML) {
+    createElement(name,options,innerHTML,parent=this.element) {
         let el = document.createElementNS('http://www.w3.org/2000/svg',name)
         for (let attr in options) el.setAttribute(attr,options[attr])
         if (innerHTML !== '' && !inou(innerHTML)) el.innerHTML = innerHTML
-        this.element.appendChild(el)
+        parent.appendChild(el)
         return el
     }
     removeElement(el) {
