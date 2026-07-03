@@ -1,9 +1,0 @@
-node_modules/
-*.log*
-package-lock.json
-.env
-.npm/
-coverage/
-dist/
-build/
-.DS_Store
