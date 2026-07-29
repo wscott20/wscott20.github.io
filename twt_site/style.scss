@@ -23,33 +23,27 @@ body {
     position: absolute;
     top: 1em;
     left: 1em;
-    height: 25em;
+    height: 20em;
     width: auto;
 }
 #contact {
     position: absolute;
-    bottom: 1em;
+    bottom: 2em;
     left: 1em;
     font-size: 1.5em;
 }
 #services {
     position: absolute;
     top: 1em;
-    left: 60%;
+    right: 2.5%;
+    width: 35%;
     li {
         margin-left: 3em;
     }
 }
-#tagline {
-    position: absolute;
-    bottom: 1em;
-    right: 1em;
-    font-size: 1.5em;
-}
 #intro {
     position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    bottom: 2em;
+    right: 1em;
+    width: 50%;
 }
